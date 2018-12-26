@@ -1,0 +1,368 @@
+% vim:tw=72 sw=2 ft=tex
+%         File: RobertoDiRemigioCV-January2017.tex
+%     Compiler: make
+%       Author: roberto
+% Date Created: 2016 Jul 15
+%  Last Change: 2017 May 11
+
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt, a4paper, sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{chemmacros}
+\usepackage[babel]{csquotes}
+
+\usepackage[%
+style=phys,
+maxcitenames=1,
+mincitenames=1,
+maxbibnames=100,
+firstinits=true,
+doi=true,
+url=false,
+isbn=false,
+eprint=false,
+texencoding=utf8,
+bibencoding=utf8,
+autocite=superscript,
+backend=biber,
+sorting=none,
+backref=false,
+hyperref=true,
+block=none,
+date=long,
+urldate=long
+]{biblatex}
+\renewcommand{\bibfont}{\normalfont\footnotesize\raggedright}
+\AtBeginBibliography{
+\DeclareFieldFormat{prefixnumber}{\mkbibbold{#1}}
+\DeclareFieldFormat{labelnumber}{\mkbibbold{#1}}
+}
+\AtEveryBibitem{%
+  \clearlist{language}%
+}
+\DeclareFieldFormat[article]{title}{\textit{#1}}
+\DeclareFieldFormat[inbook]{title}{\textit{#1}}
+\DeclareFieldFormat[incollection]{title}{\textit{#1}}
+\DeclareFieldFormat[inproceedings]{title}{\textit{#1}}
+\DeclareFieldFormat[inproceedings]{booktitle}{\textit{#1}}
+\DeclareFieldFormat[inproceedings]{note}{#1}
+\DeclareFieldFormat[unpublished]{title}{\textit{#1}}
+\DeclareFieldFormat*{citetitle}{\textit{#1}}
+
+\DeclareCiteCommand{\noparcite}%[\mkbibbrackets] CITATION LIKE in ref. 6 WITHOUT SQUARE BRACKETS
+  {\usebibmacro{cite:init}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite:comp}}
+  {}
+  {\usebibmacro{cite:dump}%
+   \usebibmacro{postnote}}
+\addbibresource{RDiRemigio_Publications.bib}
+\DefineBibliographyStrings{english}{%
+  references = {Publications},
+}
+
+% adjust the page margins
+\usepackage[scale=0.7]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{verbatim}
+% personal data
+\firstname{Roberto\\}
+\familyname{Di Remigio}
+%\title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{
+Hylleraas Centre for Quantum Molecular Sciences \\
+Department of Chemistry, University of Tromsø \\
+N-9037 Tromsø, Norway}{}{~}    % optional, remove the line if not wanted
+%\mobile{+47~45672348}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if not wanted
+\email{roberto.d.remigio@uit.no}                          % optional, remove the line if not wanted
+\homepage{www.totaltrash.xyz}                    % optional, remove the line if not wanted
+%\extrainfo{additional information}            % optional, remove the line if not wanted
+%\photo[64pt][0.4pt]{me}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Personal Information}
+\cvitem{Nationality}{Italian}
+\cvitem{Place and Date of Birth}{Teramo (Italy), 10 September 1988}
+
+\section{Education}
+\cventry{2002--2007}{High School}{Liceo Scientifico "Albert
+Einstein"}{Teramo}{Italy}{}
+\cventry{July~2007}{\textit{Diploma}}{Liceo Scientifico "Albert Einstein"}{Teramo}{}{Mark: 100/100 \emph{cum laude}}
+\cventry{2007--2010}{Corso di Laurea Triennale (B.Sc.) in
+Chemistry}{Universit\`a di Pisa}{Pisa}{Italy}{}  % arguments 3 to 6 are optional
+\cventry{September~2010}{\textit{B.Sc. in Chemistry}}{Universit\`a di
+Pisa}{Pisa}{Italy}{Thesis written and defended in Italian.
+Mark: 110/110 \emph{cum laude}}
+\cventry{2010--2012}{Corso di Laurea Magistrale (M.Sc.) in
+Chemistry}{Universit\`a di Pisa}{Pisa}{Italy}{}  % arguments 3 to 6 are optional
+\cventry{2010--2012}{European Master in Theoretical Chemistry and Theoretical Modelling}
+{Universit\`a di Pisa}{Pisa}{Italy}{http://www.emtccm.org/tccm-em/}
+\cventry{February--June~2012}{Visiting student in the group of prof. Trond Saue}
+{Universit\'e de Toulouse III (Paul Sabatier)}{Toulouse}{France}{Erasmus Placement grant}
+\cventry{September~2012}{\textit{M.Sc. in Chemistry}}{Universit\`a di
+Pisa}{Pisa}{Italy}{Thesis written and defended in English.
+Mark: 110/110 \emph{cum laude}}
+\cventry{2013--2017}{Ph.D. student in the group of prof. Luca Frediani}
+{Centre for Theoretical and Computational
+Chemistry}{Tromsø}{Norway}{}
+\cventry{October--November~2013}{Visiting student in the group of prof. T. Daniel Crawford}
+{Virginia Tech}{Blacksburg, VA}{USA}{}
+\cventry{October--December~2015}{Visiting student in the group of prof. T. Daniel Crawford}
+{Virginia Tech}{Blacksburg, VA}{USA}{}
+\cventry{January~2017}{\textit{Ph.D. in Chemistry}}{University
+of Tromsø}{Tromsø}{Norway}{}
+
+\section{Work Experience}
+\cventry{February--May~2017}{Research associate in the group of prof. Luca Frediani}
+{Centre for Theoretical and Computational Chemistry}{Tromsø}{Norway}{}
+\cventry{September~2017--}{Postdoctoral fellow}{Hylleraas Centre for
+  Quantum Molecular Sciences}{Tromsø}{Norway}{}
+\cventry{September~2017--}{Visiting postdoctoral fellow in the group of
+  prof. T. Daniel Crawford}{Virginia Tech}{Blacksburg, VA}{USA}{}
+
+\section{Funding and Awards}
+\cventry{}{Stochastic Methods for Molecular Chiroptical Properties}{Norges Forskningsrådet Mobilitetsstipend}{Grant no. 261873}{}{}
+\cvline{Abstract}{\small
+Chirality is the unique property possessed by molecules with a
+three-dimensional ``handedness'' so that their mirror images cannot be
+superposed. Chiral molecules are used in a wide range of applications
+where the two enantiomers ("hands") of the compound can exhibit
+dramatically different chemical behavior when reacting in a chiral
+environment, such as the human metabolism. The drug thalidomide is an
+infamous example. Prescribed in Europe against morning sickness to
+pregnant women between 1957 and 1962, it was withdrawn soon thereafter
+when numerous cases of birth defects were reported. Clearly, the ability
+to distinguish between the different "hands" - known as assigning the
+absolute configuration of the compound - has a critical impact on the
+design of improved drugs or materials with innovative properties. These
+species have peculiar responses to electromagnetic radiation and this
+can be exploited to shed light on their molecular structure. Despite
+tremendous technical advances in spectroscopic technologies, experiments
+alone can in many cases not provide the ultimate and conclusive answer
+on the question of absolute configurations without theoretical input. It
+is still an open challenge to devise a computational methodology that is
+accurate and efficient for sizable molecular systems both in the gas and
+the liquid phase. The intrinsic complexity engendered by the solution is
+an additional challenge to reliable computations of molecular
+chiroptical properties. The FLAKS project will open new frontiers in the
+computational prediction of molecular chiroptical properties, by
+providing the community with a faithful, accurate and efficient
+protocol. I will achieve this goal by combining robust and
+well-established formulations of chiroptical properties with parallel
+and scalable stochastic solution strategies. The open-source
+computational software tool developed within FLAKS will be a major step
+towards predictive computations of chiroptical properties.
+}
+
+\section{Schools, Congresses and Meetings}
+\cventry{May~2011}{European School on the Dynamics of Molecular Excited
+States Induced by Ultrashort Pulses}{Zaragoza Center for Advanced
+Modeling}{Zaragoza}{Spain}{}
+\cventry{September--October~2011}{6th International Intensive Course of the
+European Master in Theoretical Chemistry and Computational
+Modelling}{Universitat de Valencia}{Valencia}{Spain}{}
+\cventry{January~2013}{ThUL Actinide Chemistry School}{Karlsruhe
+Institute of Technology}{Karlsruhe}{Germany}{Poster presentation}
+\cventry{September~2013}{European Summerschool in Quantum Chemistry}{Hotel Torre Normanna}
+{Palermo}{Italy}{Poster presentation}
+\cventry{June~2014}{FemEx Oslo}{Soria Moria Hotel}{Oslo}{Norway}{Poster presentation}
+\cventry{July~2014}{13th Sostrup Summer School}{Himmelbjergegnens Natur- og
+Idrætsefterskole}{Aarhus}{Denmark}{Poster presentation}
+\cventry{September~2014}{Solutions for Solvation}{Consiglio Nazionale
+delle Ricerche}{Pisa}{Italy}{Oral presentation (invited)}
+\cventry{January~2015}{Numerical Methods for Quantum
+Chemistry}{Hurtigruten cruise ship}{Tromsø}{Norway}{Part of the local
+organizing committee}
+\cventry{June~2016}{8th Molecular Quantum Mechanics}{
+Uppsala University}{Uppsala}{Sweden}{Poster presentation}
+\cventry{July~2016}{Quantum Monte Carlo and the CASINO program X Summer
+School}{
+TTI Institute}{Vallico Sotto}{Italy}{}
+\cventry{October~2016}{International Conference on Theoretical and High
+Performance Computational Chemistry}{
+Southwest University}{Chongqing}{China}{Oral presentation (contributed)}
+\cventry{October~2016}{Magical Mystery Tour of Electron Correlation}{
+Den Norske Videnskaps-Akademi}{Oslo}{Norway}{Poster presentation}
+\cventry{April~2017}{Molecular Properties and Computational Spectroscopy}{
+CNR Research Area}{Pisa}{Italy}{Poster presentation}
+
+\section{Teaching Activities}
+\cventry{2014}{Lab assistant for the \textit{General chemistry} course
+}{University of Tromsø}{Tromsø}{Norway}{}
+\cventry{2014--2017}{Teaching assistant for the \textit{Theoretical chemistry and spectroscopy} course}{
+University of Tromsø}{Tromsø}{Norway}{}
+\cventry{September~2017}{Tutor at the \textit{European Summerschool in
+    Quantum Chemistry}}{Hotel Torre Normanna}{Palermo}{Italy}{}
+
+\section{Bachelor thesis}
+\cvline{Title}{\textbf{Excitation Energy Transfer and Metal Nanoparticles: a quantum mechanical study}}
+\cvline{Supervisor}{prof. Benedetta Mennucci, \small{\textit{Universit\`a di Pisa}}}
+\cvline{Abstract}{\small Aim of the thesis is the computational
+description of the effect of a metal nanoparticle on the
+\emph{Excitation Energy Transfer} phenomenon occurring between two
+cromophores. The complex environment, namely the solvent and the metal
+nanoparticle, is treated according to an extension of the Polarizable
+Continuum Model (PCM), a continuum model for solvation, presented by
+Corni \emph{et al.} [\textit{J. Chem. Phys.} \textbf{117}, 7266 (2002)].
+Excitation Energy Transfer is treated using linear response theory,
+according to the formulation given by Iozzi \emph{et al.} [\textit{J.
+Chem. Phys.} \textbf{120}, 7029 (2004)]. An analysis of the calculated
+couplings and transfer rates is reported, the results from a classical
+F\"orster analysis are also discussed.}
+
+\pagebreak
+\section{Master thesis}
+\cvline{Title}{\textbf{Relativistic Quantum Chemistry and Polarizable Continuum Model. Theory and Implementation}}
+\cvline{Supervisors}{prof. Benedetta Mennucci, \small{\textit{Universit\`a di Pisa}}}
+\cvline{}{prof. Trond Saue, \small{\textit{Universit\'e de Toulouse III (Paul Sabatier)}}}
+\cvline{Abstract}{\small The aim of the thesis if twofold: on the one
+hand, to present the theoretical development of the Polarizable
+Continuum Model (PCM), a continuum model for solvation, in the framework
+of 4-component relativistic molecular electronic-structure calculations;
+a limited region of the great realm called Relativistic Quantum
+Chemistry. On the other hand, to detail the development undertaken to
+put the ideas and the theory in practice in the computational program
+\texttt{DIRAC}. At the best of our knowledge, this is the first attempt
+ever made to consider environment effects in relativistic molecular
+electronic-structure 4-component calculations. Our implementation takes
+advantage of the recently developed \texttt{PCMSolver} module,
+interfaced to the SCF and Linear Response algorithms in \texttt{DIRAC}.
+Preliminary results for geometries, electric dipole moments and static
+electric dipole moment polarizabilities for the \ch{H2X} species
+(\ch{X}=\ch{O}, \ch{S}, \ch{Se}, \ch{Te} and \ch{Po}) are discussed.}
+%The thesis project is, partly, the result of my participation in the European Master in Theoretical
+%Chemistry and Computational Modelling.}
+\section{Ph.D. project}
+\cvline{Title}{\textbf{The Polarizable Continuum Model Goes Viral!
+{\small Extensible, Modular and Sustainable Development of Quantum Mechanical
+Continuum Solvation Models}}}
+\cvline{Supervisors}{prof. Luca Frediani, \small{\textit{University of Tromsø}}}
+\cvline{}{prof. Benedetta Mennucci, \small{\textit{Universit\`a di Pisa}}}
+\cvline{Abstract}{\small
+The vast majority of chemical phenomena happens in complex environments,
+where the molecule of interest can interact with a large number of other
+moieties, solvent molecules or residues in a protein.
+I present our efforts in modelling such complex systems based on the
+development of the polarizable continuum model for solvation.
+While the solute is described by a quantum mechanical method, the
+surrounding environment is replaced by a structureless continuum
+dielectric.
+The mutual polarization of the solute-environment system is described by
+classical electrostatics.
+Despite its inherent simplifications, the model contains the basic
+mathematical features of more refined explicit quantum/classical
+polarizable models.
+Leveraging this fundamental similarity, we show how the
+inclusion of environment effects for relativistic and nonrelativistic
+quantum mechanical Hamiltonians, arbitrary order response properties and
+high-level electron correlation methods can be transparently derived and
+implemented.
+\newline
+The computer implementation of the polarizable continuum model is
+central to the work presented in this dissertation.
+The quantum chemistry software ecosystem suffers from a growing
+complexity. Modular programming offers an extensible, flexible and
+sustainable paradigm to implement new features with reduced effort.
+PCMSolver, our open-source application programming interface, can
+provide continuum solvation functionality to any quantum chemistry
+software: continuum solvation goes \emph{viral}.
+Our strategy affords simpler programming workflows, more thorough
+testing and lower overall code complexity.
+As examples of the flexibility of our implementation approach, we
+present results for the continuum modelling of non homogeneous
+environments and how wavelet-based numerical methods greatly outperform
+the accuracy of traditional methods usually employed in continuum
+solvation models.}
+
+\section{Software Contributions}
+\cvline{PCMSolver}{Lead developer}
+\cvline{Psi4}{Contributing developer}
+\cvline{DIRAC}{Contributing developer}
+\cvline{DALTON}{Contributing developer}
+\cvline{LSDALTON}{Contributing developer}
+\cvline{ReSpect}{Contributing developer}
+\cvline{}{I have contributed solvation modeling capabilities and build
+infrastructure improvements to the abovementioned codes.}
+
+\section{Languages}
+\cvitemwithcomment{Italian}{Mother tongue}{}
+\cvitemwithcomment{English}{Fluent}{University of Cambridge ESOL FCE Certficate, 2006 (Grade A)}
+\cvitemwithcomment{Norwegian}{Intermediate}{}
+\cvitemwithcomment{French}{Basic}{}
+
+\section{Computer skills}
+\subsection{Operating systems}
+\cvitem{}{Linux and Windows}
+\subsection{Programming languages}
+\cvitem{}{\texttt{C++}, \texttt{FORTRAN} (77 and 90), \texttt{C} and \texttt{Python}}
+\subsection{Quantum chemistry software}
+\cvitem{}{\texttt{DIRAC}, \texttt{DALTON}, \texttt{Psi4},
+\texttt{LSDALTON}, \texttt{ReSpect} and \texttt{Gaussian}}
+\subsection{Miscellaneous software}
+\cvitem{}{\texttt{GIT}, \texttt{CMake}, \texttt{ParaView} and \LaTeX}
+
+%\section{Personal skills}
+%\cvitem{}{Enthusiastic and highly motivated person who is reliable, organized and hard working.
+%Possessing good communication and interpersonal skills.
+%Flexible within the working environment and able to adapt quickly to challenging situations.
+%Friendly personality who enjoys the challenge of working under pressure either independently
+%or as a member of a team.}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\printbibliography
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template.tex'.
