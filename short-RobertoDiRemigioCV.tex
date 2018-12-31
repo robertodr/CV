@@ -1,0 +1,251 @@
+\documentclass[notitlepage,a4paper,11pt]{article}
+\usepackage[left=2cm,top=2cm,bottom=2cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{pgfgantt}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{colorlinks,
+            breaklinks,
+            urlcolor=blue,
+            linkcolor=blue,
+            citecolor=blue} % Set link colors
+\usepackage{graphics,epsfig,subfigure}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shadows,positioning}
+\usepackage{latexsym}
+\usepackage{dcolumn}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage[compact]{titlesec}
+\usepackage{pgfgantt}
+\usepackage{wrapfig}
+\usepackage{eurosym}
+\usepackage{multirow}
+\usepackage[style=phys,
+maxcitenames=100,
+maxbibnames=100,
+minbibnames=3,
+giveninits=true,
+url=false,
+isbn=false,
+eprint=false,
+texencoding=utf8,
+bibencoding=utf8,
+autocite=superscript,
+backend=biber
+]{biblatex}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\it}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\bfseries}
+\DeclareBibliographyCategory{fullcited}
+\AtEveryBibitem{%
+  \clearfield{note}%
+  \clearlist{language}
+}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+\pretitle{\begin{center}\Large\bfseries}
+\posttitle{\par\end{center}\vspace{-5mm}}
+\setlength{\droptitle}{-25mm}
+\predate{}
+\postdate{}
+\preauthor{}
+\postauthor{}
+
+\newcommand{\pcmsolver}{\href{http://pcmsolver.readthedocs.org}{\texttt{PCMSolver}}}
+\newcommand{\psicode}{\href{http://www.psicode.org}{\texttt{Psi4}}}
+\newcommand{\DIRAC}{\href{http://www.diracprogram.org}{\texttt{DIRAC}}}
+\newcommand{\DALTON}{\href{http://www.daltonprogram.org}{\texttt{DALTON}}}
+\newcommand{\LSDALTON}{\href{http://www.daltonprogram.org}{\texttt{LSDALTON}}}
+\newcommand{\ReSpect}{\href{http://respectprogram.org/}{\texttt{ReSpect}}}
+\newcommand{\HANDE}{\href{http://hande.readthedocs.io/}{\texttt{HANDE-QMC}}}
+
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\lhead{\small \emph{Roberto Di Remigio}}
+\chead{}
+\rhead{Curriculum Vit\ae}
+
+\begin{document}
+\section*{Curriculum Vit\ae}\label{sec:curriculum-vitae}
+
+\begin{itemize}
+\item PERSONAL INFORMATION
+
+Di Remigio, Roberto \\
+Date of birth: September 10, 1988 \\
+Sex: Male \\
+Nationality: Italian \\
+ORCID: \href{https://orcid.org/0000-0002-5452-9239}{0000-0002-5452-9239} \\
+URL: \href{totaltrash.xyz/}{\texttt{https://totaltrash.xyz/}}
+
+\item EDUCATION
+
+  \begin{tabular}{ll}
+2013 - 2017 & Ph.D. student \\
+    & Department of Chemistry, UiT -- The Arctic University of Norway, Tromsø, Norway \\
+2010 - 2012 & European Master in Theoretical Chemistry and Theoretical Modelling (EMTCCM) \\
+    & Department of Chemistry, Faculty of Science, University of Pisa, Italy\\
+2010 - 2012 & M.Sc. \\
+    & Department of Chemistry, Faculty of Science, University of Pisa, Italy\\
+2007 - 2010 & B.Sc. \\
+    & Department of Chemistry, Faculty of Science, University of Pisa, Italy\\
+  \end{tabular}
+
+\item CURRENT POSITION
+
+  \begin{tabular}{ll}
+2017 - present & Postdoctoral fellow \\
+    & Department of Chemistry, UiT -- The Arctic University of Norway, Tromsø, Norway \\
+    & Department of Chemistry, Virginia Tech, Blacksburg, VA, United States \\
+  \end{tabular}
+
+\item FELLOWSHIPS AND AWARDS
+
+  \begin{tabular}{ll}
+ 2017-present & FRIPRO Mobility Grant \\
+              & Stochastic Methods for Molecular Chiroptical Properties \\
+              & Project number: \href{https://www.forskningsradet.no/prosjektbanken/#/project/NFR/261873}{261873} \\
+ 2012 & Erasmus Placement, University of Pisa, Pisa, Italy  \\
+      & and University of Toulouse III (Paul Sabatier), Toulouse, France \\
+  \end{tabular}
+
+\item MOBILITY
+
+  \begin{tabular}{ll}
+ 2012 & Visiting student in the group of Prof.~Trond Saue \\
+     &  University of Toulouse III (Paul Sabatier), Toulouse, France \\
+ 2013 & Visiting student in the group of Prof.~T.~Daniel Crawford \\
+      & Virginia Tech, Blacksburg, Virginia, United States \\
+ 2015 & Visiting student in the group of Prof.~T.~Daniel Crawford \\
+      & Virginia Tech, Blacksburg, Virginia, United States \\
+  \end{tabular}
+
+\item TEACHING ACTIVITIES
+
+  \begin{tabular}{ll}
+2017 & Tutor at the \textit{European Summerschool in Quantum Chemistry}, Palermo, Italy \\
+2014 - 2017  & Theoretical chemistry and spectroscopy, teaching assistant, UiT \\
+2014  & General chemistry, lab assistant, UiT \\
+  \end{tabular}
+
+\item ORGANIZATION OF SCIENTIFIC MEETINGS
+
+  \begin{tabular}{lp{12cm}}
+    2015 & Member of the organizing committee, NMQC, A voyage from molecules to material with numerical methods for Quantum Chemistry, Norway \\
+    2017 & Co-organizer, Coding Solvation, Livorno, Italy \\
+         & \url{https://coding-solvation.gitlab.io/} \\
+  \end{tabular}
+
+\item MEMBERSHIP OF SCIENTIFIC SOCIETIES
+
+  \begin{tabular}{lp{12cm}}
+2014 - present  & Member of the Norwegian Chemical Society \\
+  \end{tabular}
+
+\item MAJOR COLLABORATIONS
+
+  \begin{itemize}
+  \item Prof.~Luca Frediani, (UiT): solvent effects.
+  \item Prof.~Trond Saue, (Univ. Paul Sabatier, Toulouse): relativistic quantum chemistry.
+  \item Dr.~Michal Repisky, (UiT): real-time time-dependent density-functional theory.
+  \item Prof.~T. Daniel Crawford, (Virginia Tech, USA): correlated methods.
+  \item Dr.~Alex J. W. Thom, (University of Cambridge): stochastic methods.
+  \end{itemize}
+
+\item SCHOOLS, CONGRESSES AND MEETINGS
+
+  \begin{tabular}{ll}
+    2011 & European School on the Dynamics of Molecular Excited States Induced by Ultrashort Pulses \\
+         & Zaragoza Center for Advanced Modeling, Zaragoza, Spain \\
+    2011 & 6th International Intensive Course of the EMTCCM \\
+         & Universitat de Valencia, Valencia, Spain \\
+    2013 & ThUL Actinide Chemistry School \\
+         & Karlsruhe Institute of Technology, Karlsruhe, Germany \\
+         & \emph{Poster presentation} \\
+    2013 & European Summerschool in Quantum Chemistry \\
+         & Hotel Torre Normanna, Palermo, Italy \\
+         & \emph{Poster presentation} \\
+    2014 & FemEx Oslo Conference \\
+         & Soria Moria Hotel, Oslo, Norway \\ %Poster presentation
+         & \emph{Poster presentation} \\
+    2014 & 13th Sostrup Summer School \\
+         & Himmelbjergegnens Natur- og Idrætsefterskole, Aarhus, Denmark \\ %Poster presentation
+         & \emph{Poster presentation} \\
+    2014 & Solutions for Solvation: A Symposium in Honour of Prof.~Jacopo Tomasi \\
+         & Consiglio Nazionale delle Ricerche, Pisa, Italy \\ %Oral presentation (invited)
+         & \emph{Oral presentation (invited)} \\
+    2015 & Numerical Methods for Quantum Chemistry, Tromsø, Norway \\
+         & \emph{Local organizer} \\
+    2016 & 8th Molecular Quantum Mechanics \\
+         & Uppsala University, Uppsala, Sweden \\ 
+         & \emph{Poster presentation} \\
+    2016 & Quantum Monte Carlo and the CASINO program X Summer School \\
+         & TTI Institute, Italy \\
+    2016 & International Conference on Theoretical and High Performance Computational Chemistryi \\
+         & Southwest University, Chongqing, China \\
+         & \emph{Oral presentation (contributed)} \\
+    2016 & Magical Mystery Tour of Electron Correlation \\
+         & Den Norske Videnskaps-Akademi, Oslo, Norway \\
+         & \emph{Poster presentation} \\
+    2017 & Molecular Properties and Computational Spectroscopy \\
+         & Consiglio Nazionale delle Ricerche, Pisa, Italy \\
+         & \emph{Poster presentation} \\
+    2017 & Lindau Nobel Laurerate Meeting \\
+         & Lindau, Germany  \\
+    2017 & Coding Solvation \\
+         & Livorno, Italy \\
+         & \emph{Co-organizer and chair} \\
+    2018 & Python simulation software \\
+         & Pasadena, CA, United States \\
+         & \emph{Oral presentation (invited)} \\
+  \end{tabular}
+  
+\end{itemize}
+
+\pagebreak
+
+\begin{itemize}
+
+\item PUBLICATIONS AND CITATIONS
+
+I have published 9 research papers in peer reviewed journals and co-authored 1
+technical manual.
+\begin{refsection}[published.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+I have 4 manuscripts in preparation, 1 in press and 1 submitted.
+\begin{refsection}[submitted.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\item CONTRIBUTIONS TO SCIENTIFIC SOFTWARE
+
+  \begin{tabular}{ll}
+ \pcmsolver{} & Lead developer \\
+ \psicode{}   & Contributing developer \\
+ \DIRAC{}     & Contributing developer \\
+ \DALTON{}    & Contributing developer \\
+ \LSDALTON{}  & Contributing developer \\
+ \ReSpect{}   & Contributing developer \\
+ \HANDE{}     & Contributing developer \\
+  \end{tabular}
+
+\emph{ Note: I have contributed solvation modeling capabilities and/or build
+infrastructure improvements to the abovementioned codes.}
+
+\end{itemize}
+
+\end{document}
